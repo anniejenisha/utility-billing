@@ -3,6 +3,7 @@
 
 frappe.ui.form.on("Meter Reading", {
 	refresh: function (frm) {
+<<<<<<< HEAD
 		frm.set_query("customer", function () {
 			return {
 				filters: {
@@ -10,6 +11,8 @@ frappe.ui.form.on("Meter Reading", {
 				},
 			};
 		});
+=======
+>>>>>>> upstream/version-16
 		if (!frm.doc.date) {
 			frm.set_value("date", frappe.datetime.now_date());
 		}

@@ -13,15 +13,27 @@ A comprehensive module for managing utility services (water, electricity, gas, e
 #### **Core Features**
 
 1. **🔧 Configurable Billing**
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/version-16
    - Customizable tariffs, price lists, and customer grouping (residential/commercial)
    - Auto-generated sales orders/invoices (draft or submitted)
 
 2. **📟 Meter & Service Management**
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/version-16
    - Track consumption via **meter readings**
    - **Service requests** workflow: Survey → BOM → Billing
    - Meter numbers as serial numbers
 
 3. **⚡ Bulk Operations**
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/version-16
    - **Mass billing** for multiple customers
    - Merge sales orders per customer
 

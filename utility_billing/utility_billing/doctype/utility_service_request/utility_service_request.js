@@ -2,7 +2,10 @@ const settingsDoctypeName = "Utility Billing Settings";
 
 frappe.ui.form.on("Utility Service Request", {
 	refresh: async function (frm) {
+<<<<<<< HEAD
 		set_party_name_query(frm);
+=======
+>>>>>>> upstream/version-16
 		frm.toggle_display("address_html", !frm.is_new());
 		frm.toggle_display("contact_html", !frm.is_new());
 		frm.ignore_doctypes_on_cancel_all = ["BOM"];
@@ -136,10 +139,15 @@ frappe.ui.form.on("Utility Service Request", {
 
 	service_request_from(frm) {
 		set_dynamic_field_label(frm);
+<<<<<<< HEAD
         frm.set_value("party_name", "");
         set_party_name_query(frm);
 	},
 	
+=======
+	},
+
+>>>>>>> upstream/version-16
 	utility_bill_structure(frm) {
 		if (!frm.doc.utility_bill_structure) return;
 
@@ -277,6 +285,7 @@ frappe.ui.form.on("Utility Service Request", {
 		frm.ignore_doctypes_on_cancel_all = ["BOM"];
 	},
 });
+<<<<<<< HEAD
 function set_party_name_query(frm) {
     frm.set_query("party_name", function() {
         if (frm.doc.service_request_from === "Customer") {
@@ -290,6 +299,9 @@ function set_party_name_query(frm) {
         return {};
     });
 }
+=======
+
+>>>>>>> upstream/version-16
 frappe.ui.form.on("Utility Service Request Item", {
 	form_render: function (frm, cdt, cdn) {
 		let row = locals[cdt][cdn];

@@ -5,11 +5,17 @@ frappe.ui.form.on("Utility Property", {
 	refresh(frm) {
 		frm.toggle_display("address_html", !frm.is_new());
 		frm.toggle_display("contact_html", !frm.is_new());
+<<<<<<< HEAD
 
 		if (!frm.is_new()) {
 			frappe.contacts.render_address_and_contact(frm);
 		}
 
+=======
+		if (!frm.is_new()) {
+			frappe.contacts.render_address_and_contact(frm);
+		}
+>>>>>>> upstream/version-16
 		frm.set_query("parent_utility_property", function () {
 			return {
 				filters: {
@@ -17,8 +23,11 @@ frappe.ui.form.on("Utility Property", {
 				},
 			};
 		});
+<<<<<<< HEAD
 
 		render_gallery_preview(frm);
+=======
+>>>>>>> upstream/version-16
 	},
 
 	item(frm) {
@@ -34,7 +43,11 @@ frappe.ui.form.on("Utility Property", {
 					limit_page_length: 1,
 				},
 				callback: function (r) {
+<<<<<<< HEAD
 					if (r.message?.length) {
+=======
+					if (r.message && r.message.length > 0) {
+>>>>>>> upstream/version-16
 						const asset = r.message[0];
 						frm.set_value("location", asset.location);
 						frm.set_value("asset_category", asset.asset_category);
@@ -45,6 +58,7 @@ frappe.ui.form.on("Utility Property", {
 		}
 	},
 });
+<<<<<<< HEAD
 
 frappe.ui.form.on("Property Gallery Image", {
 	image: render_gallery_preview,
@@ -115,3 +129,5 @@ function render_gallery_preview(frm) {
 		</div>
 	`);
 }
+=======
+>>>>>>> upstream/version-16
